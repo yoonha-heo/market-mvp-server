@@ -2,7 +2,7 @@
 
 Backend for a mobile marketplace MVP.
 
-Node.js / Express / Prisma / Supabase (PostgreSQL) / JWT
+Node.js / Express / Prisma / Supabase (PostgreSQL/Storage) / Render (Deploy)
 
 ---
 
@@ -26,13 +26,12 @@ JWT_SECRET=
 JWT_REFRESH_SECRET=
 
 # Supabase
-# Server
+# Storage
 SUPABASE_URL=
 SUPABASE_SERVICE_ROLE_KEY=
 
 # Database
 DATABASE_URL=
-DIRECT_URL=
 ```
 
 ---
