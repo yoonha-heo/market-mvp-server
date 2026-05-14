@@ -22,7 +22,11 @@ router.post("/", authMiddleware, async (req, res) => {
 router.get("/", authMiddleware, async (req, res) => {
   const userId = req.user?.userId;
 
-  const products = await prisma.product.findMany();
+  const products = await prisma.product.findMany({
+    orderBy: {
+      createdAt: "desc",
+    },
+  });
 
   const favorites = await prisma.favorite.findMany({
     where: { userId },
